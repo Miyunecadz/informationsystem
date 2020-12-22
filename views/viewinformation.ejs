@@ -1,0 +1,51 @@
+<%- include('./layout/header'); %>
+<%- include('./layout/navbar'); %>
+
+<% if(data.length > 0) { %>
+<div class="container p-2 table-responsive">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Address</th>
+            <th scope="col">Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Birthdate</th>
+            <th scope="col">Birthplace</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(info => { %>
+                <tr>
+                    <td><%= info.firstname %></td>
+                    <td><%=info.lastname  %></td>
+                    <td><%=info.address  %></td>
+                    <td><%=info.number  %></td>
+                    <td><%=info.email  %></td>
+                    <td><%=info.birthdate  %></td>
+                    <td><%=info.birthplace  %></td>
+                    <td>
+                        <div class="d-flex">
+                            <a class="btn btn-success" href="/view/<%= info.id %>">Update</a>
+                            <form action="/view/delete" method="post">
+                                <input type="hidden" name="itemid" value="<%= info.id %>">
+                                <button class="btn btn-danger" type="submit">Delete</button>
+                            </form>
+                        </div>
+                    </td>
+
+                  </tr>
+            <% }) %>
+        </tbody>
+      </table>
+</div>
+
+<% } else {%>
+  <div class="container">
+    <h2 class="text-center text-secondary" style="padding-top: 30vh;">No Data</h2>
+  </div>
+  <% } %>
+
+<%- include('./layout/footer'); %>

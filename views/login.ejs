@@ -1,0 +1,40 @@
+<%- include('./layout/header'); %>
+
+<div class="container">
+    <div class="row justify-content-md-center mt-5">
+        <div class="col-md-6 mt-5">
+            <div class="card mt-5">
+                <div class="card-header ">
+                    <h5 class="text-center">Login User</h5>
+                </div>
+                <div class="card-body">
+                    <% if(message !== null) {%>
+                    <div class="container bg-danger">
+                        <p class="p-3 text-center text-light"><%= message %></p>
+                    </div>
+                    <% } %>
+
+                    <div>
+                        <form action="/login" method="post">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input class="form-control" type="text" name="username" id="username" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input class="form-control" type="password" name="password" id="password" required>
+                            </div>
+                            <br>
+                            <p>Don't Have Account? <a href="/signup">Click Here</a></p>
+                            <button type="submit" class="form-control btn btn-success">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('./layout/footer'); %>

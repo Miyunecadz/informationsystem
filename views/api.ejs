@@ -1,0 +1,57 @@
+<%- include('./layout/header'); %>
+<%- include('./layout/navbar'); %>
+
+<div class="container">
+    <h3>What is API</h3>
+    <span>API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other. Each time you use an app like Facebook, send an instant message, or check the weather on your phone, you’re using an API.</span>
+    <br>
+    <br>
+    <h3>How to test your API</h3>
+    <span>You can test your API using Postman. You can also download Postman <a target="_blank" href="https://www.postman.com/downloads/">here</a>. </span> 
+    <br>
+    <br>
+    <h3>API Links</h3>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Method</th>
+            <th scope="col">Link</th>
+            <th scope="col">Action Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GET</td>
+            <td>localhost:3000/api/information</td>
+            <td>Fetch all data from database</td>
+          </tr>
+          <tr>
+            <td>POST</td>
+            <td>localhost:3000/api/information</td>
+            <td>Create new information data and save it to database</td>
+          </tr>
+          <tr>
+            <td>GET</td>
+            <td>localhost:3000/api/information/{id}</td>
+            <td>Fetch the data of the specific id</td>
+          </tr>
+          <tr>
+            <td>PUT</td>
+            <td>localhost:3000/api/information/{id}</td>
+            <td>Update the data of the specific id</td>
+          </tr>
+          <tr>
+            <td>DELETE</td>
+            <td>localhost:3000/api/information/{id}</td>
+            <td>Delete the data of the specific id</td>
+          </tr>
+          <tr>
+            <td>DELETE</td>
+            <td>localhost:3000/api/information</td>
+            <td>Delete all data from database</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<%- include('./layout/footer'); %>

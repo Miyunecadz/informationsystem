@@ -1,0 +1,120 @@
+<%- include('./layout/header'); %>
+<%- include('./layout/navbar'); %>
+
+
+<div class="container px-md-5">
+    <div class="container px-md-5">
+        <form action="/add" method="post">
+            <div class="card">
+                <div class="card-header"><h5>Personal Information</h5></div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="firstname">Firstname</label>
+                        <input class="form-control" type="text" value="<%= data.firstname %>" name="firstname" id="firstname" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="lastname">Lastname</label>
+                        <input class="form-control" type="text" value="<%= data.lastname %>" name="lastname" id="lastname" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <input class="form-control" type="text" value="<%= data.gender %>" name="gender" id="gender" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input class="form-control" type="text" value="<%= data.address %>" name="address" id="address" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="number">Phone Number</label>
+                        <input class="form-control" type="text" value="<%= data.number %>" name="number" id="number" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="text"  value="<%= data.email %>" name="email" id="email" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="birthdate">Birth Date</label>
+                        <input class="form-control" type="date" value="<%= data.birthdate %>" name="birthdate" id="birthdate" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="birthplace">Birth Place</label>
+                        <input class="form-control" type="text" value="<%= data.birthplace %>" name="birthplace" id="birthplace" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="civilstatus">Civil Status</label>
+                        <input class="form-control" type="text" value="<%= data.civilstatus %>" name="civilstatus" id="civilstatus" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="citizenship">Citizenship</label>
+                        <input class="form-control" type="text" value="<%= data.citizenship %>" name="citizenship" id="citizenship" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="occupation">Occupation</label>
+                        <input class="form-control" type="text" value="<%= data.occupation %>" name="occupation" id="occupation" required>
+                    </div>
+        
+                </div>
+            </div>
+            
+            <br>
+
+            <div class="card">
+                <div class="card-header"><h5>Parent Information</h5></div>
+                <div class="card-body row">
+                    <div class="form-group col-md">
+                        <div class="form-group">
+                            <label for="fathername">Father Name</label>
+                            <input class="form-control" type="text" value="<%= data.fathername %>" name="fathername" id="fathername" required>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="fatheroccupation">Occupation</label>
+                            <input class="form-control" type="text" value="<%= data.fatheroccupation %>" name="fatheroccupation" id="fatheroccupation" required>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="fatheraddress">Address</label>
+                            <input class="form-control" type="text" value="<%= data.fatheraddress %>" name="fatheraddress" id="fatheraddress" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md">
+                        <div class="form-group">
+                            <label for="mothername">Mother Name</label>
+                            <input class="form-control" type="text" value="<%= data.mothername %>" name="mothername" id="mothername" required>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="motheroccupation">Occupation</label>
+                            <input class="form-control" type="text" value="<%= data.motheroccupation %>" name="motheroccupation" id="motheroccupation" required>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="motheraddress">Address</label>
+                            <input class="form-control" type="text" value="<%= data.motheraddress %>" name="motheraddress" id="motheraddress" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form-group pt-3">
+                <button class="btn btn-success form-control" type="submit">Update Information</button>
+            </div>
+
+            <br>
+        </form>
+    </div>
+</div>
+
+
+<%- include('./layout/footer'); %>
